@@ -14,12 +14,11 @@ namespace Mine.Services
         {
             items = new List<ItemModel>()
             {
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Wooden Sword", Description="Basic training Sword made from wood.", Value=1 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Iron Sword", Description="Mass Produced and dependable.", Value=2 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Steel Sword", Description="Forged by a master, superior edge and durability.", Value=4 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Mithril Sword", Description="Made from magicly embued ore from deep in the dwarven forges.", Value=6 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Thunderfurry, Blessed Blade of the Windseeker", Description="Forged for the elemental gods themselves, not intended for mortal hands.", Value=10 }
             };
         }
 
