@@ -29,14 +29,17 @@
 
             <Label Text="Value"
                    FontSize="Medium" />
-            <Stepper Value="{Binding Item.Value, Mode=TwoWay}"
-                     Minimum="0"
-                     Maximum="10"
-                     Increment="1" 
-                     ValueChanged="Value_OnStepperValueChanged" />
-            <Label x:Name="ValueValue"
-                   Text="{Binding Item.Value}"
-                   FontSize="Medium"/>
+            
+            <StackLayout Orientation="Horizontal">
+                <Stepper Value="{Binding Item.Value, Mode=TwoWay}"
+                         Minimum="0"
+                         Maximum="10"
+                         Increment="1" 
+                         ValueChanged="Value_OnStepperValueChanged" />
+                <Label x:Name="ValueValue"
+                       Text="{Binding Item.Value}"
+                       FontSize="Medium"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
     
