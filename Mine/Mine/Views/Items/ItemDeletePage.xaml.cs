@@ -22,6 +22,30 @@ namespace Mine.Views
             BindingContext = this.viewModel = viewModel;
         }
 
+        /// <summary>
+        /// Called when Cancel is clicked in the tool bar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void CancelItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
+
+        /// <summary>
+        /// Called when delete is pressed in the tool bar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void DeleteItem_Clicked(object sender, EventArgs e)
+        {
+            //TODO: Add message here
+
+            MessagingCenter.Send(this, "DeleteItem", viewModel.Item);
+        
+            await Navigation.PopModalAsync();
+        }
+
         public ItemDeletePage()
         {
             InitializeComponent();
