@@ -25,7 +25,8 @@
             <Editor Text="{Binding Item.Description}" 
                     d:Text="Item description" 
                     FontSize="Small" 
-                    Margin="0" />
+                    Margin="0"
+                    AutoSize="TextChanges"/>
 
             <Label Text="Value"
                    FontSize="Medium" />
