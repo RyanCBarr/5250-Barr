@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mine.Android", "Mine\Mine.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mine.iOS", "Mine\Mine.iOS\Mine.iOS.csproj", "{864DE6DF-3D73-4876-9268-0CC12EBAAD3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mine", "Mine\Mine\Mine.csproj", "{222BB397-2262-433F-B67A-CF3D679BDFF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mine", "Mine\Mine\Mine.csproj", "{222BB397-2262-433F-B67A-CF3D679BDFF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
