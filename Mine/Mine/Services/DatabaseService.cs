@@ -63,16 +63,41 @@ namespace Mine.Services
             return true;
         }
 
-        public Task<bool> UpdateAsync(ItemModel item)
+        /// <summary>
+        /// Updates an already existing item in the DB
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public async Task<bool> UpdateAsync(ItemModel item)
         {
-            throw new NotImplementedException();
+            //disallows a null item from being updated in the DB
+            if (item == null)
+            {
+                return false;
+            }
+
+            var result = await Database.UpdateAsync(item);
+
+            //if update fails, return false
+            if (result == 0)
+            {
+                return false;
+            }
+
+            return true;
         }
+
 
         public Task<bool> DeleteAsync(string id)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Reads item from the DB
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Task<ItemModel> ReadAsync(string id)
         {
             if (id == null)
