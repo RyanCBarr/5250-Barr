@@ -36,7 +36,7 @@ namespace UnitTests.Helpers
             // Reset
 
             // Assert 
-            Assert.AreEqual(true, result >=1);
+            Assert.AreEqual(true, result >= 1);
             Assert.AreEqual(true, result <= 6);
         }
 
@@ -116,6 +116,22 @@ namespace UnitTests.Helpers
             // Assert 
             Assert.AreEqual(5, result);
         }
-    }
 
+        [Test]
+        public void RollDice_Valid_Roll_Forced_3D10__Fixed_5_Should_Return_15()
+        {
+            // Arrange
+            DiceHelper.ForceRollsToNotRandom = true;
+            DiceHelper.ForcedRandomValue = 5;
+
+            // Act
+            var result = DiceHelper.RollDice(3, 10);
+
+            // Reset
+            DiceHelper.ForceRollsToNotRandom = false;
+
+            // Assert 
+            Assert.AreEqual(15, result);
+        }
+    }
 }
