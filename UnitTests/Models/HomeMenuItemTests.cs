@@ -9,15 +9,15 @@ using Mine.Models;
 namespace UnitTests.Models
 {
     [TestFixture]
-    public class ItemModelTests
+    public class HomeMenuItemTests
     {
         [Test]
-        public void ItemModel_Constructor_Valid_Default_Should_Pass()
+        public void HomeMenuItem_Constructor_Valid_Default_Should_Pass()
         {
             // Arrange
 
             // Act
-            var result = new ItemModel();
+            var result = new HomeMenuItem();
 
             // Reset
 
@@ -26,39 +26,22 @@ namespace UnitTests.Models
         }
 
         [Test]
-        public void ItemModel_Set_Get_Valid_Default_Should_Pass()
+        public void HomeMenuItem_Set_Get_Valid_Default_Should_Pass()
         {
             //Arrange
-
+          
+    
             //Act
-            var result = new ItemModel();
-            result.Description = "Description";
-            result.Id = "Id";
-            result.Text = "Text";
-            result.Value = 1;
+            var result = new HomeMenuItem();
+            result.Id = MenuItemType.About;
+            result.Title = "Title";
 
             //Reset
 
             //Assert
-            Assert.AreEqual("Description", result.Description);
-            Assert.AreEqual("Id", result.Id);
-            Assert.AreEqual("Text", result.Text);
-            Assert.AreEqual(1, result.Value);
+            Assert.AreEqual(MenuItemType.About, result.Id);
+            Assert.AreEqual("Title", result.Title);
 
-        }
-
-        [Test]
-        public void ItemModel_Get_Valid_Default_Should_Pass()
-        {
-            //Arrange
-
-            //Act
-            var result = new ItemModel();
-
-            //Reset
-
-            //Assert
-            Assert.AreEqual(0, result.Value);
         }
     }
 }
