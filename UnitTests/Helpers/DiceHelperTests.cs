@@ -40,6 +40,7 @@ namespace UnitTests.Helpers
             Assert.AreEqual(true, result <= 6);
         }
 
+        [Test]
         public void RollDice_Invalid_Roll_Forced_1_Should_Return_1()
         {
             // Arrange
@@ -54,6 +55,21 @@ namespace UnitTests.Helpers
 
             // Assert 
             Assert.AreEqual(1, result);
+        }
+
+        [Test]
+        public void RollDice_Valid_Roll_2D6_Should_Return_Between_2_And_12()
+        {
+            // Arrange
+
+            // Act
+            var result = DiceHelper.RollDice(2, 6);
+
+            // Reset
+
+            // Assert 
+            Assert.AreEqual(true, result >= 2);
+            Assert.AreEqual(true, result <= 12);
         }
     }
 
