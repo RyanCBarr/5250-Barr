@@ -24,7 +24,6 @@ namespace UnitTests.Helpers
             // Assert 
             Assert.AreEqual(0, result);
         }
-        }
     }
 
 }
